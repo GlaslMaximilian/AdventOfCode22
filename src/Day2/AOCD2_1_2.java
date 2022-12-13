@@ -11,7 +11,7 @@ package src.Day2;
 import java.io.*;
 
 
-public class AOCD2_1 {
+public class AOCD2_1_2 {
     public static int getPoints() throws IOException {
         int pts = 0;
         File file = new File(
@@ -20,7 +20,7 @@ public class AOCD2_1 {
         BufferedReader br = new BufferedReader(new FileReader(file));
 
         for (String str = br.readLine(); str != null; str = br.readLine())
-            pts += determineGameOutcome(str.split(" ")[0], str.split(" ")[1]);
+            pts += determineGameOutcome_2(str.split(" ")[0], str.split(" ")[1]);
 
         return pts;
     }
@@ -47,6 +47,41 @@ public class AOCD2_1 {
                     case "X" -> points = 7;
                     case "Y" -> points = 2;
                     case "Z" -> points = 6;
+                }
+                break;
+        }
+        return points;
+    }
+
+    /* Part 2
+    *  A = ROCK       Score: 1     X = lose
+    *  B = PAPER      Score: 2     Y = draw
+    *  C = SCISSORS   Score: 3     Z = win
+    *
+    * */
+
+    private static int determineGameOutcome_2(String p1, String p2) {
+        int points = 0;
+        switch (p1) {
+            case "A":
+                switch (p2) {
+                    case "X" -> points = 3;
+                    case "Y" -> points = 4;
+                    case "Z" -> points = 8;
+                }
+                break;
+            case "B":
+                switch (p2) {
+                    case "X" -> points = 1;
+                    case "Y" -> points = 5;
+                    case "Z" -> points = 9;
+                }
+                break;
+            case "C":
+                switch (p2) {
+                    case "X" -> points = 2;
+                    case "Y" -> points = 6;
+                    case "Z" -> points = 7;
                 }
                 break;
         }

@@ -2,8 +2,7 @@ package src;
 
 import java.io.IOException;
 
-import static src.Day1.AOCD1.*;
-import static src.Day2.AOCD2_1.getPoints;
+import static src.Day2.AOCD2_1_2.getPoints;
 
 public class Main {
     public static void main(String[] args) throws IOException {
