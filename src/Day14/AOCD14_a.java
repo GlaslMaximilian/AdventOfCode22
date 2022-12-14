@@ -11,7 +11,7 @@ public class AOCD14_a {
     public static playingFiled field = new playingFiled();
     public static void readInput_14() throws IOException {
         File file = new File(
-                "C:\\Users\\glasl\\IdeaProjects\\AdventOfCode22\\src\\Day14\\input"
+                "C:\\Users\\glasl\\IdeaProjects\\AdventOfCode22\\src\\Day14\\input.txt"
         );
         BufferedReader br = new BufferedReader(new FileReader(file));
 
@@ -21,6 +21,8 @@ public class AOCD14_a {
                 parser(tmp.get(i), tmp.get(i+1));
         }
 
+        parser("0,171", "2000,171");
+
         field.stones
                 .forEach( entry -> {
                     field.maxX = entry.getFirst()  > field.maxX ? entry.getFirst() : field.maxX;
@@ -28,6 +30,7 @@ public class AOCD14_a {
                     field.minX = entry.getFirst()  < field.minX ? entry.getFirst() : field.minX;
                 }
         );
+
     }
 
     private static void parser(String fst, String snd) {
@@ -44,17 +47,14 @@ public class AOCD14_a {
         int[][] directions = {{0,1}, {-1,1}, {1,1}};
         int counter = 0;
         while (make) {
-            if (counter > 75_000) break;
+            //if (counter > 3_000_000) break;
             if (field.check(x, y+directions[0][1]) || field.check(x, y+directions[0][1], 0)) {
                 if (field.check(x+directions[1][0], y+directions[1][1]) || field.check(x+directions[1][0], y+directions[1][1], 0)) {
                     if (field.check(x+directions[2][0], y+directions[2][1]) || field.check(x+directions[2][0], y+directions[2][1], 0)) {
-                        if (y > 168)
-                            make = false;
-                        else {
-                            field.sand.add(new Pair<>(x,y));
-                            x = 500;
-                            y = 1;
-                        }
+                        field.sand.add(new Pair<>(x,y));
+                        if (x == 500 && y == 1) break;
+                        x = 500;
+                        y = 1;
                     } else {y++; x++;}
                 } else {y++; x--;}
             } else y++;

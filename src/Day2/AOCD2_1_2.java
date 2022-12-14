@@ -15,7 +15,7 @@ public class AOCD2_1_2 {
     public static int getPoints() throws IOException {
         int pts = 0;
         File file = new File(
-                "C:\\Users\\glasl\\IdeaProjects\\AdventOfCode22\\src\\Day2\\input"
+                "C:\\Users\\glasl\\IdeaProjects\\AdventOfCode22\\src\\Day2\\input.txt"
         );
         BufferedReader br = new BufferedReader(new FileReader(file));
 

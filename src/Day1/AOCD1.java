@@ -17,7 +17,7 @@ public class AOCD1 {
         map.put(1, 0); map.put(2, 0); map.put(3, 0);
 
         File file = new File(
-                "C:\\Users\\glasl\\IdeaProjects\\AdventOfCode22\\src\\Day1\\input"
+                "C:\\Users\\glasl\\IdeaProjects\\AdventOfCode22\\src\\Day1\\input.txt"
         );
 
         BufferedReader br = new BufferedReader(new FileReader(file));
@@ -38,7 +38,7 @@ public class AOCD1 {
 }
 
 /*
- * FIXED!! --> Placed dummy value at the end of 'input' file
+ * FIXED!! --> Placed dummy value at the end of 'input.txt' file
  * there's still a bug, cause the last elf is skipped.
  * Not relevant for this example but should be fixed ...
  *
