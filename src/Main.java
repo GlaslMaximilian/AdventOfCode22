@@ -5,6 +5,7 @@ import java.io.IOException;
 import static src.Day14.AOCD14_a.readInput_14;
 import static src.Day14.AOCD14_a.simulation;
 import static src.Day15.AOCD15_a.readInput_15;
+import static src.Day18.AOCD18_a.getInput_18;
 import static src.Day2.AOCD2_1_2.getPoints;
 import static src.Day3.AOCD3_1.readInput;
 
@@ -25,6 +26,9 @@ public class Main {
         //simulation();
 
         /*--- a15 ---*/
-        readInput_15();
+        //readInput_15();
+
+        /*--- a18 ---*/
+        getInput_18();
     }
 }
