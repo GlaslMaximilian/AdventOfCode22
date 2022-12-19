@@ -31,16 +31,13 @@ public class Grid {
             for (Point p2 : points) {
                 if (!p1.equals(p2)) {
                     if (p1.x + 1 == p2.x && p1.y == p2.y && p1.z == p2.z) {
-                        p2.subtractOne();
-                        p1.subtractOne();
+                        p2.subtractOne(); p1.subtractOne();
                     }
                     if (p1.x == p2.x && p1.y + 1 == p2.y && p1.z == p2.z) {
-                        p2.subtractOne();
-                        p1.subtractOne();
+                        p2.subtractOne(); p1.subtractOne();
                     }
                     if (p1.x == p2.x && p1.y == p2.y && p1.z + 1 == p2.z) {
-                        p2.subtractOne();
-                        p1.subtractOne();
+                        p2.subtractOne(); p1.subtractOne();
                     }
                 }
             }
