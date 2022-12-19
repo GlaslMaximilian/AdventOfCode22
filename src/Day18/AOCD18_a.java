@@ -6,7 +6,7 @@ public class AOCD18_a {
     public static Grid g = new Grid();
     public static void getInput_18() throws IOException {
         File file = new File(
-                "C:\\Users\\glasl\\IdeaProjects\\AdventOfCode22\\src\\Day18\\input"
+                "C:\\Users\\glasl\\IdeaProjects\\AdventOfCode22\\src\\Day18\\test"
         );
         BufferedReader br = new BufferedReader(new FileReader(file));
 
