@@ -30,5 +30,7 @@ public class Main {
 
         /*--- a18 ---*/
         getInput_18();
+
+        /*--- a19 ---*/
     }
 }
